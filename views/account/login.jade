@@ -1,0 +1,14 @@
+extends ../layout 
+
+block content
+    h1 登录
+
+    form(method="POST")
+        .form-group 
+            label.control-label(for="username")  用户名
+            input.form-control(name="username")
+        .form-group
+            label.con(for="password")  密码
+            input.form-control(name="password", type="password")
+        .form-group 
+            button.btn.btn-primary(type="submit") 登录

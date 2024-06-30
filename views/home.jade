@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    if user
+        h1 #{user.username}，欢迎！
+    else 
+        h1 欢迎！
+    p hello world

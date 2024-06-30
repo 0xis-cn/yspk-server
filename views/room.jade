@@ -1,0 +1,17 @@
+extends layout 
+
+block header 
+    title #{room.name} | 元素扑克
+    script
+        | document.token = !{JSON.stringify(token)}
+    script(src="/js/wsclient.js" defer)
+
+block content
+    h1 #{room.name}
+    .row
+        .col-sm-3 
+            form(name="chat")
+                input.btn.btn-primary(type="submit", disabled, name="send")
+                textarea.w-100#chat(rows="3", name="msg") 
+        .col-sm-9 
+            | 告诉你吧，token是#{token}。

@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css')
+    block header
+      title #{title} | 元素扑克
+
+  body
+
+    nav.navbar-light.navbar
+      .container
+        .navbar-header 
+          a.navbar-brand(href='/')
+            img(src='/images/wordmark.png', alt='元素扑克', height=44)
+        .d-flex
+          ul.navbar-nav.me-auto
+            li.nav-item 
+              a.nav-link(href='/room') 房间
+            li.nav-item
+              if user 
+                a.nav-link(href='/user') #{user.username}
+              else 
+                a.nav-link(href='/login') 登录
+    .container
+      block content
+
+    script(src='https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js')
+    script(src='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.min.js')

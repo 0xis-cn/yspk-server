@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+    h1 房间
+
+    form(method="POST")
+        button.btn.btn-primary(type="submit") 新建
+
+    ul
+        each room in rooms 
+            li
+                a(href='./' + room.roomid) #{room.name}
